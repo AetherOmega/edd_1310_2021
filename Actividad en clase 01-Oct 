@@ -1,0 +1,424 @@
+{
+  "nbformat": 4,
+  "nbformat_minor": 0,
+  "metadata": {
+    "colab": {
+      "name": "Te damos la bienvenida a Colaboratory",
+      "provenance": [],
+      "collapsed_sections": [],
+      "include_colab_link": true
+    },
+    "kernelspec": {
+      "display_name": "Python 3",
+      "name": "python3"
+    }
+  },
+  "cells": [
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "view-in-github",
+        "colab_type": "text"
+      },
+      "source": [
+        "<a href=\"https://colab.research.google.com/github/AetherOmega/edd_1310_2021/blob/master/Actividad%20en%20clase%2001-Oct%20\" target=\"_parent\"><img src=\"https://colab.research.google.com/assets/colab-badge.svg\" alt=\"Open In Colab\"/></a>"
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "_dpvNJNy7snG"
+      },
+      "source": [
+        "## Intro Python 3\n",
+        "### Variables\n",
+        "tipo dinamico\n",
+        "escuela = \"FES Aragón\""
+      ]
+    },
+    {
+      "cell_type": "code",
+      "metadata": {
+        "id": "0iir_r777JVp",
+        "outputId": "0242d9b1-aa99-4d1f-8b95-78810cd4b389",
+        "colab": {
+          "base_uri": "https://localhost:8080/",
+          "height": 170
+        }
+      },
+      "source": [
+        "escuela = \"FES Aragón\"\n",
+        "print (escuela)\n",
+        "print (\"-------\")\n",
+        "edad = 13\n",
+        "estatura = 1.67\n",
+        "fumador = True \n",
+        "frase = \"\"\"\n",
+        "Esta es\n",
+        "una\n",
+        "frase de multiple linea\n",
+        "y tambien es\n",
+        "un tipo de dato\n",
+        "\"\"\"\n",
+        "print (frase)\n",
+        "nombre = 'Jose'\n",
+        "nombre_completo = \"Jose Sosa Cardenas\"\n"
+      ],
+      "execution_count": 5,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "text": [
+            "FES Aragón\n",
+            "-------\n",
+            "\n",
+            "Esta es\n",
+            "una\n",
+            "frase de multiple linea\n",
+            "y tambien es\n",
+            "un tipo de dato\n",
+            "\n"
+          ],
+          "name": "stdout"
+        }
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "_X2zOIFr91Vz"
+      },
+      "source": [
+        "#Print\n",
+        "con comas ,\n",
+        "\n",
+        "con signo mas +\n",
+        "\n",
+        "con format ()\n",
+        "\n",
+        "con operador f\"\""
+      ]
+    },
+    {
+      "cell_type": "code",
+      "metadata": {
+        "id": "eBP1b_En-C3D",
+        "outputId": "c556b7de-8f6d-4fa4-b605-d7e2da6bbb41",
+        "colab": {
+          "base_uri": "https://localhost:8080/",
+          "height": 34
+        }
+      },
+      "source": [
+        "#\n",
+        "print (nombre, edad)\n"
+      ],
+      "execution_count": 6,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "text": [
+            "Jose 13\n"
+          ],
+          "name": "stdout"
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "metadata": {
+        "id": "zQcEI3XT_A6C",
+        "outputId": "de126f9c-2d01-46eb-e6ac-d5c4bcea678e",
+        "colab": {
+          "base_uri": "https://localhost:8080/",
+          "height": 51
+        }
+      },
+      "source": [
+        "#El mas concatena CADENAS\n",
+        "print (nombre + str(edad))\n",
+        "#No tiene espacio por la concatenacion, a diferencia de la coma\n",
+        "print (nombre + nombre_completo) #snake case (palabras minusculas separadas por guiones)"
+      ],
+      "execution_count": 7,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "text": [
+            "Jose13\n",
+            "JoseJose Sosa Cardenas\n"
+          ],
+          "name": "stdout"
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "metadata": {
+        "id": "yGoHjKl0ANaY",
+        "outputId": "a6fd395e-b7d7-4fa9-fd1c-062c2edba5db",
+        "colab": {
+          "base_uri": "https://localhost:8080/",
+          "height": 68
+        }
+      },
+      "source": [
+        "#Con formato -> Su nombre es Jose y su edad es 13 años.\n",
+        "print (\"Su nombre es\", nombre, \"y su edad es de \",edad,\"años.\")\n",
+        "print(\"Su nombre es (0) y su edad es de (1) años.\".format(nombre,edad)  )\n",
+        "print(\"Su nombre es (1) y su edad es de (0) años.\".format(nombre,edad) )\n",
+        "\n"
+      ],
+      "execution_count": 12,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "text": [
+            "Su nombre es Jose y su edad es de  13 años.\n",
+            "Su nombre es (0) y su edad es de (1) años.\n",
+            "Su nombre es (1) y su edad es de (0) años.\n"
+          ],
+          "name": "stdout"
+        }
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "m0mRPXcjDQH1"
+      },
+      "source": [
+        "# **Caracter de escape**\n",
+        "\n",
+        "\n",
+        "\n",
+        "* \\n salto de linea \n",
+        "*\\t tabulador\n",
+        "*\\a beep\n",
+        "*\\\" imprimir comilla dobe\n",
+        "*\\' imprimir comilla simple\n",
+        "\n",
+        "\n",
+        "\n",
+        "\n"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "metadata": {
+        "id": "Q3dPrCYCEQ6n"
+      },
+      "source": [
+        "print(f\"\\tMi nombre es\\n\\t\\t {nombre}\")"
+      ],
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "3PH_jd0xENP_"
+      },
+      "source": [
+        "# Ayuda \n",
+        "dir()\n",
+        "help()"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "metadata": {
+        "id": "xKQRDXBqEzU8"
+      },
+      "source": [
+        "help(str)"
+      ],
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "code",
+      "metadata": {
+        "id": "XgbhiHhOFSgm",
+        "outputId": "74f10552-bbd1-400c-cc2a-a50173e96d23",
+        "colab": {
+          "base_uri": "https://localhost:8080/",
+          "height": 51
+        }
+      },
+      "source": [
+        "print(nombre_completo.capitalize() )\n",
+        "print(nombre_completo.upper() , end=\"-----\" )\n",
+        "print(nombre_completo.title() )\n"
+      ],
+      "execution_count": 21,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "text": [
+            "Jose sosa cardenas\n",
+            "JOSE SOSA CARDENAS-----Jose Sosa Cardenas\n"
+          ],
+          "name": "stdout"
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "metadata": {
+        "id": "-1Y2B1veGBiO"
+      },
+      "source": [
+        "help(print)"
+      ],
+      "execution_count": 21,
+      "outputs": []
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "rKsCkoWfGsON"
+      },
+      "source": [
+        "# Class String\n",
+        "Es manejada  como un arreglo ( c o java) o lista (python)\n",
+        "\n"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "metadata": {
+        "id": "j2L9Sx98HyoI"
+      },
+      "source": [
+        "telefono = \"Huawei mate 30 pro\" \n",
+        "print( telefono [5] )"
+      ],
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "WlZ-D_FIIKm8"
+      },
+      "source": [
+        "# Slicing\n",
+        "[inicio : stop : incremento]\n",
+        "Nota: El stoo no se incluye, termina en el valor anterior\n",
+        "\n"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "metadata": {
+        "id": "LHeVNQ_nIjHp",
+        "outputId": "13586864-7f17-4a8d-c76a-21c79c5ae2e7",
+        "colab": {
+          "base_uri": "https://localhost:8080/",
+          "height": 85
+        }
+      },
+      "source": [
+        "print(telefono[7:11:1])\n",
+        "# el inicio y el incremento son opcionales\n",
+        "# el valor por defecro de stio es len(str)\n",
+        "print(telefono[:11:])\n",
+        "#incremento negativo\n",
+        "print(telefono[::-1])\n",
+        "#slacing negativo\n",
+        "print(telefono[-3::-1])"
+      ],
+      "execution_count": 28,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "text": [
+            "mate\n",
+            "Huawei mate\n",
+            "orp 03 etam iewauH\n",
+            "p 03 etam iewauH\n"
+          ],
+          "name": "stdout"
+        }
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "ox8C5t6tNRI3"
+      },
+      "source": [
+        "# Metodos de string (str)\n",
+        "\n",
+        "Existen muy utiles en esta clase\n"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "metadata": {
+        "id": "4ec3-sflNbVz",
+        "outputId": "a44e5f08-dd57-4295-d7d3-2266be0dd4b5",
+        "colab": {
+          "base_uri": "https://localhost:8080/",
+          "height": 323
+        }
+      },
+      "source": [
+        "facultad=\"    facultad de estudios aragon     \\n \"\n",
+        "print(facultad)\n",
+        "print(facultad.count(\"u\")) #numero de elementos en la cadena\n",
+        "print(facultad.find(\"s\")) #Busca un caracter(la primera coincidencia)\n",
+        "tamaño=len (facultad)\n",
+        "print(facultad.strip())\n",
+        "print(len(facultad))\n",
+        "print(f\"tamaño de la cadena es {tamaño} caracteres\")\n",
+        "print(facultad.strip().split(\" \"))\n",
+        "\n",
+        "print(\"--------------------------------------------------\")\n",
+        "#copiar cadenas\n",
+        "otra_cadena = facultad\n",
+        "print(otra_cadena)\n",
+        "facultad = \"FES ARAGON\"\n",
+        "print(facultad)\n",
+        "print(otra_cadena)\n",
+        "\n",
+        "#copiar listas\n",
+        "colores = [\"rojo\",\"verde\"]\n",
+        "otra = colores.copy()\n",
+        "print(colores)\n",
+        "print(otra)\n",
+        "otra.append(\"rosa\")\n",
+        "print(colores)\n",
+        "print(otra)"
+      ],
+      "execution_count": 52,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "text": [
+            "    facultad de estudios aragon     \n",
+            " \n",
+            "2\n",
+            "17\n",
+            "facultad de estudios aragon\n",
+            "38\n",
+            "tamaño de la cadena es 38 caracteres\n",
+            "['facultad', 'de', 'estudios', 'aragon']\n",
+            "--------------------------------------------------\n",
+            "    facultad de estudios aragon     \n",
+            " \n",
+            "FES ARAGON\n",
+            "    facultad de estudios aragon     \n",
+            " \n",
+            "['rojo', 'verde']\n",
+            "['rojo', 'verde']\n",
+            "['rojo', 'verde']\n",
+            "['rojo', 'verde', 'rosa']\n"
+          ],
+          "name": "stdout"
+        }
+      ]
+    }
+  ]
+}
