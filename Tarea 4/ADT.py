@@ -20,6 +20,7 @@ for obrero in obreros:
     n_sueldo = obreros.horas_extra(obrero[5], obrero[4])
     obrero[5] = n_sueldo
 
+
 #Prestaciones
 for obrero in obreros:
     obrero[5] = int(obrero[5]) + obreros.prestaciones(obrero[6][0:4], obrero[5])
