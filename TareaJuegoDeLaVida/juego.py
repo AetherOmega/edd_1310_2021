@@ -74,6 +74,9 @@ class Juego:
              print("Coordenada la celula fuera del grid")
         return vivos
 
-        def evolucionar(self):
-            print("Generación:")
-            self.tupla()
+     def evolucionar( self, celulas_nacidas, celulas_muertas):
+        for celula_nueva in celulas_nacidas:
+            self.grid.set_item(celula_nueva[0],celula_nueva[1],self.CELULA_VIVA)
+        for muertas in celulas_muertas:
+            self.grid.set_item(muertas[0], muertas[1], self.CELULA_MUERTA)
+            imprime_grid() 
